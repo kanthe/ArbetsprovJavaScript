@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+	
+		<!-- META DATA -->
+		
+		<meta http-equiv="Content-Type"	content="text/html; charset=utf-8" />
+		
+		<!-- CSS -->
+		
+		<link href="src/css/style.css" rel="stylesheet" type="text/css" media="screen" title="Default" />
+		
+		<!-- JAVASCRIPT -->
+		
+		<script type="text/javascript" language="javascript" src="src/js/Main.js"></script>	
+		
+		<!-- TITLE -->
+		
+		<title>Arbetsprov, patientformulär</title>
+		
+	</head>
+	
+	<body>
+	
+		<!-- INCA OBJECT -->
+		
+		<script>
+			var inca = {patienter : [], behandlingar : [], allmantillstand : [] };		
+		</script>
+			
+			<!-- MENU TABS -->
+			
+			<ul class="tab">
+  				<li id="tab_form"><a href="javascript:void(0)" class="tablinks">Formulär</a></li>
+  				<li id="tab_anmalan"><a href="javascript:void(0)" class="tablinks">Canceranmälan</a></li>
+  			</ul>
+  			
+  			<!-- PATIENTFORMULÄR TAB -->
+  			
+  			<div id="h_form_wrapper">
+  			<h1>Patientformulär</h1>
+  			</div>
+  			<hr>
+			<!-- REGISTRERA NY PATIENT FORM -->  
+								
+  			<div id="r_form_wrapper">
+				<h2>Registrera ny patient</h2>
+				
+				<form>
+					<label>Personnummer: </label><input id="personnummer"/><br>
+					<p class="format">ÅÅÅÅMMDDXXXX</p><p id="pnr_error" class="error"></p>
+					<br>
+					<label>Diagnosdatum: </label><input id="datum"/><br>
+					<p class="format">ÅÅMMDD</p><p id="date_error" class="error"></p>
+					<br>
+					<label>Diagnos: </label><input id="diagnos"/><br>
+					<p id="diag_error" class="error"></p>
+					<br>
+					<label>Grund för diagnos: </label><br>
+					<input type="radio" name="diagnos_grund" value="PAD"/>PAD<br>
+					<input type="radio" name="diagnos_grund" value="Cytologi"/>Cytologi<br>
+					<input type="radio" name="diagnos_grund" value="Röntgen"/>Röntgen<br>
+					<input type="radio" name="diagnos_grund" value="Klinisk undersökning"/>Klinisk undersökning<br>
+					<p id="grund_error" class="error"></p>
+					<br>
+					<br>
+					<p id="reg_correct" class="correct"></p><input type="button" id="register_button" value="Spara"><br>
+				</form>
+				<br>
+			<p id="critical_error" class="error"></p>
+			</div>
+			<div id="b_e_form_wrapper">
+			
+				<!-- REGISTRERA BEHANDLING FORM -->
+				
+				<h2>Registrera behandling</h2>
+				
+				<form>
+					<label>Personnummer: </label><input id="b_personnummer"/><br>
+					<p class="format">ÅÅÅÅMMDDXXXX</p><p id="b_pnr_error" class="error"></p>
+					<br>
+					<label>Behandlingsdatum: </label><input id="b_datum"/><br>
+					<p class="format">ÅÅMMDD</p><p id="b_date_error" class="error"></p>
+					<br>
+					<label>Behandlingsmetod: </label><br>
+					<input type="radio" name="b_metod" value="Kirurgi"/>Kirurgi<br>
+					<input type="radio" name="b_metod" value="Strålbehandling"/>Strålbehandling<br>
+					<input type="radio" name="b_metod" value="Cytostatikabehandling"/>Cytostatikabehandling<br>
+					<p id="b_method_error" class="error"></p>
+					<br>
+					<br>
+					<label>Operationskod (om kirurgi): </label><input id="b_operationskod"/><br>
+					<p class="format">AB1234</p><p id="b_code_error" class="error"></p>
+					<br>
+					<p id="b_correct" class="correct"></p><input type="button" id="treatment_button" value="Spara"><br>
+				</form>
+				<br>
+				<h2>Registrera allmäntillstånd</h2>
+				
+				<!-- REGISTRERA ALLMÄNTILLSTÅND FORM -->				
+				
+				<form>
+					<label>Personnummer: </label><input id="ecog_personnummer"/><br>
+					<p class="format">ÅÅÅÅMMDDXXXX</p><p id="e_pnr_error" class="error"></p>
+					<br>
+					<label>Datum för ECOG: </label><input id="ecog_datum"/><br>
+					<p class="format">ÅÅMMDD</p><p id="e_date_error" class="error"></p>
+					<br>
+					<label>ECOG-värde: </label><br>
+					<label class="ecog_label">0</label><input type="radio" name="ecog_varde" class="ecog" value="0"/><br>
+					<label class="ecog_label">1</label><input type="radio" name="ecog_varde" class="ecog" value="1"/><br>
+					<label class="ecog_label">2</label><input type="radio" name="ecog_varde" class="ecog" value="2"/><br>
+					<label class="ecog_label">3</label><input type="radio" name="ecog_varde" class="ecog" value="3"/><br>
+					<label class="ecog_label">4</label><input type="radio" name="ecog_varde" class="ecog" value="4"/><br>
+					<label class="ecog_label">5</label><input type="radio" name="ecog_varde" class="ecog" value="5"/><br>
+					<p id="e_ecog_error" class="error"></p>
+					<br>
+					<br>
+					<p id="e_correct" class="correct"></p><input type="button" id="ecog_button" value="Spara"><br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+				</form>
+			</div>
+			
+			<!-- CANCERANMÄLAN TAB -->
+			
+			<div id="h_anmalan_wrapper">
+			<h1>Canceranmälan</h1>
+			</div>
+			<div id="anmalan_wrapper">
+				<h2>Visa diagnos och högsta ECOG för en enskild patient</h2>
+				<label>Personnummer: </label><input type="text" id="a_personnummer"><br>
+				<p class="format">ÅÅÅÅMMDDXXXX</p><p id="a_pnr_error" class="error"></p>
+				<br>
+				<input type="button" id="anmalan_button" value="Visa"><br>
+				<br>
+				<label>Diagnos: </label><p id="anm_diagnos" class="anm_resultat"></p><br>
+				<br>
+				<label>Högsta ECOG: </label><p id="anm_ecog" class="anm_resultat"></p><br>
+			</div>
+	</body>
+
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<register>
+	<patienter>
+		<patient>
+			<personnummer></personnummer>
+			<diagnosdatum></diagnosdatum>
+			<diagnos></diagnos>
+			<diagnosgrund></diagnosgrund>
+		</patient>
+	 </patienter>
+	 
+	<behandlingar>
+		<behandling>
+			<B_ID></B_ID>
+			<personnummer></personnummer>
+			<behandlingsdatum></behandlingsdatum>
+			<metod></metod>
+			<operationskod></operationskod>
+		</behandling>
+	</behandlingar>
+
+	<allmantillstand>
+		<tillstand>
+			<ECOG_ID></ECOG_ID>
+			<personnummer></personnummer>
+			<ecog_datum></ecog_datum>
+			<ecog></ecog>
+		</tillstand>
+	</allmantillstand> 
+</register>

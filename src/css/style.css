@@ -1,0 +1,97 @@
+body {
+	font-family: Verdana, Arial;
+	background-color: #fff2e6;
+	margin-left: 50px;
+	margin-top: 50px;
+}
+h1 {
+	font-family: Yu Gothic UI Semibold, Arial;
+	color: blue;
+}
+#r_form_wrapper {
+	visibility: visible;
+	position: absolute;
+	top: 200px;
+}
+#b_e_form_wrapper {
+	visibility: visible;
+	position: absolute;
+	top: 200px;
+	left: 500px;
+}
+#h_anmalan_wrapper {
+	visibility: hidden;
+	position: absolute;
+	top: 100px;
+}
+#anmalan_wrapper {
+	visibility: hidden;
+	position: absolute;
+	top: 200px;
+}
+h2 {
+	color: green;
+}
+p {display: inline-block;}
+	
+hr {clear: both;}
+
+label { }
+input, .anm_resultat, .error {
+	position: absolute;
+	left: 230px;
+}
+.format {
+	font-size: 10px;
+	color: blue;
+}
+.error {
+	width: 200px;
+	font-size: 10px;
+	color: red;
+}
+.correct {
+	width: 200px;
+	font-size: 10px;
+	color: green;
+}
+#anm_diagnos {bottom: 25px;}
+#anm_ecog {bottom: -15px;}
+
+.ecog_label {margin-left: 180px;}
+
+/**** Tabs ****
+
+Ref: http://www.w3schools.com/howto/howto_js_tabs.asp */
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ccc;}
+
+/* ***************** */
